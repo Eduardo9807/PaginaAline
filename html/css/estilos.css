@@ -1,0 +1,242 @@
+
+:root {
+    --color1: #F4C894;
+    --color2: #EAB26F;
+    --color3: #FFE0BA;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color3);
+    color: #333;
+  }
+  
+  header {
+    background-color: var(--color1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #333;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .instructores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .instructor {
+    background-color: var(--color1);
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 200px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: var(--color2);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: var(--color1);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  /* -------- RESPONSIVE -------- */
+  @media screen and (max-width: 1024px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .instructores {
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    header img {
+      max-width: 100px;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    section {
+      padding: 20px 10px;
+    }
+  
+    .instructores {
+      flex-direction: column;
+    }
+  
+    form, input, textarea, button {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    nav {
+      flex-direction: row;
+    }
+  }
+  
+  /* -------- SECCIÓN: SOBRE LA ESCUELA -------- */
+  .seccion-lugar {
+    background-color: #fff3e0;
+    padding: 60px 20px;
+    color: #289387;
+  }
+  
+  .contenedor-lugar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .texto-lugar {
+    flex: 1 1 300px;
+  }
+  
+  .texto-lugar h2 {
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .texto-lugar p {
+    font-size: 1.1rem;
+    color: #289387;
+  }
+  
+  .imagen-lugar {
+    flex: 1 1 300px;
+  }
+  
+  .imagen-lugar img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  /* -------- EFECTO FADE-IN -------- */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .imagen-flotante {
+    width: 100%; /* Ajusta el tamaño de la imagen */
+    max-width: 300px; /* Puedes ajustar el tamaño máximo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.imagen-flotante:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para darle el efecto de flotación */
+}
+
+/* -------- SECCIÓN DE INSTRUCTORES -------- */
+
+.seccion-instructores {
+  background-color: #fff;
+  text-align: center;
+}
+
+.contenedor-instructores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.tarjeta-instructor {
+  background-color: var(--color1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-instructor:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-instructor img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
